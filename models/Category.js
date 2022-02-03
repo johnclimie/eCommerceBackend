@@ -1,9 +1,13 @@
+// Imports important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
 
+// Imports our database connection from config.js
 const sequelize = require('../config/connection.js');
 
+// Initializes Category model (table) by extending off Sequelize's Model class
 class Category extends Model {}
 
+// Creates category model
 Category.init(
   {
     id: {
@@ -26,4 +30,5 @@ Category.init(
   }
 );
 
+// Exports Category model
 module.exports = Category;
